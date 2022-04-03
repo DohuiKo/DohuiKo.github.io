@@ -50,19 +50,19 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'javaScript',
+        title: 'JavaScript',
         collapsable: true,
-        children: ['/javaScript/start', 'javaScript/js입문하기']
+        children: ['/JavaScript/start', 'JavaScript/js입문하기']
       },
       {
-        title: 'react',
+        title: 'React',
         collapsable: true,
-        children: ['/react/start']
+        children: ['/React/start']
       },
       {
-        title: 'vuepress',
+        title: 'Vuepress',
         collapsable: true,
-        children: ['/vuepress/vuepress blog만들기']
+        children: ['/Vuepress/vuepress blog만들기']
       },
     ]
   },
