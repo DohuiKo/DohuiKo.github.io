@@ -59,6 +59,11 @@ module.exports = {
         collapsable: true,
         children: ['/react/start']
       },
+      {
+        title: 'vuepress',
+        collapsable: true,
+        children: ['/vuepress/vuepress blog만들기']
+      },
     ]
   },
 
