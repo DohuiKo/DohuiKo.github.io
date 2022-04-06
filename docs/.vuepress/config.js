@@ -57,7 +57,7 @@ module.exports = {
       {
         title: 'React',
         collapsable: true,
-        children: ['/React/start']
+        children: ['/React/React시작하기', '/React/React시작하기']
       },
       {
         title: 'Vuepress',
