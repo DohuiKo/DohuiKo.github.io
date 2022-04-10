@@ -1,5 +1,5 @@
 ---
-title: React의 특징
+title: React 시작하기
 ---
 
 ## React란?

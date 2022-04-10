@@ -57,12 +57,17 @@ module.exports = {
       {
         title: 'React',
         collapsable: true,
-        children: ['/React/React시작하기', '/React/React시작하기']
+        children: ['/React/React시작하기']
       },
       {
         title: 'Vuepress',
         collapsable: true,
         children: ['/Vuepress/vuepress blog만들기']
+      },
+      {
+        title: 'Github',
+        collapsable: true,
+        children: ['/Github/Github 처음 생성하고 연결하기']
       },
     ]
   },
