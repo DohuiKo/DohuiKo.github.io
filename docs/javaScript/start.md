@@ -1,5 +1,5 @@
 ---
-title: javaScript시작하기
+title: JavaScript시작하기
 ---
 
 ## 자바스크립트 게시글
