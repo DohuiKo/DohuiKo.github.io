@@ -52,22 +52,22 @@ module.exports = {
       {
         title: 'JavaScript',
         collapsable: true,
-        children: ['/JavaScript/start', 'JavaScript/js입문하기']
+        children: ['/JavaScript/start.md', 'JavaScript/js1.md']
       },
       {
         title: 'React',
         collapsable: true,
-        children: ['/React/React시작하기']
+        children: ['/React/react1.md']
       },
       {
         title: 'Vuepress',
         collapsable: true,
-        children: ['/Vuepress/vuepress blog만들기']
+        children: ['/Vuepress/vuepress1.md']
       },
       {
         title: 'Github',
         collapsable: true,
-        children: ['/Github/Github 처음 생성하고 연결하기', '/Github/원격 저장소 만들어서 로컬 저장소에 연결하기']
+        children: ['/Github/github1.md', '/Github/github2.md', '/Github/github3.md']
       },
     ]
   },
