@@ -1,12 +1,12 @@
-const { description } = require('../../package')
+const { description } = require("../../package");
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  base: '/play-my-life/',
+  base: "/play-my-life/",
 
-  title: 'Play My Life',
+  title: "Play My Life",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -18,9 +18,12 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#ffc0cb' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ["meta", { name: "theme-color", content: "#ffc0cb" }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+    ],
   ],
 
   /**
@@ -29,60 +32,62 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: "",
     editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    docsDir: "",
+    editLinkText: "",
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: "Guide",
+        link: "/guide/",
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: "Config",
+        link: "/config/",
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
+        text: "VuePress",
+        link: "https://v1.vuepress.vuejs.org",
+      },
     ],
     sidebar: [
       {
-        title: 'JS',
+        title: "JS",
         collapsable: true,
-        children: ['/JS/start.md', 'JS/js1.md']
+        children: ["/JS/start.md", "JS/js1.md", "JS/forEach_map.md"],
       },
       {
-        title: 'React',
+        title: "React",
         collapsable: true,
-        children: ['/React/react1.md', '/React/react2.md']
+        children: ["/React/react1.md", "/React/react2.md"],
       },
       {
-        title: 'Vuepress',
+        title: "Vuepress",
         collapsable: true,
-        children: ['/Vuepress/vuepress1.md']
+        children: ["/Vuepress/vuepress1.md"],
       },
       {
-        title: 'Github',
+        title: "Github",
         collapsable: true,
-        children: ['/Github/github1.md', '/Github/github2.md', '/Github/github3.md',
-                  '/Github/github4.md', '/Github/github5.md']
+        children: [
+          "/Github/github1.md",
+          "/Github/github2.md",
+          "/Github/github3.md",
+          "/Github/github4.md",
+          "/Github/github5.md",
+        ],
       },
       {
-        title: 'About_IT_Project',
+        title: "About_IT_Project",
         collapsable: true,
-        children: ['/About_IT_Project/it_project.md']
+        children: ["/About_IT_Project/it_project.md"],
       },
-    ]
+    ],
   },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ]
-}
+  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+};

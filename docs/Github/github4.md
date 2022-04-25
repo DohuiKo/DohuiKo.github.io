@@ -16,7 +16,7 @@ title: Github 시작하기(4)
 - 현재 깃의 상태 확인하기 `$ git status`
 - 수정한 파일을 스테이징 하기 `$ git add [스테이징할 파일 이름]`
 
-*한꺼번에 모든 변경사항을 올리려면 `$ git add .`
+\*한꺼번에 모든 변경사항을 올리려면 `$ git add .`
 
 - 스테이지에 올라온 파일 커밋하기 `$ git commit -m “message"`
 
@@ -24,7 +24,7 @@ title: Github 시작하기(4)
 
 - 버전이 제대로 만들어졌는지 확인하기 `$ git log`
 
-*간략하게 한 줄로 표기하려면 `$ git log —oneline`
+\*간략하게 한 줄로 표기하려면 `$ git log —oneline`
 
 - 변경 사항 확인하기 `$ git diff`
 
