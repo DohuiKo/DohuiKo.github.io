@@ -67,7 +67,8 @@ module.exports = {
       {
         title: 'Github',
         collapsable: true,
-        children: ['/Github/github1.md', '/Github/github2.md', '/Github/github3.md', '/Github/github4.md']
+        children: ['/Github/github1.md', '/Github/github2.md', '/Github/github3.md',
+                  '/Github/github4.md', '/Github/github5.md']
       },
       {
         title: 'About_IT_Project',
