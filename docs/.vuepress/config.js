@@ -55,7 +55,7 @@ module.exports = {
       {
         title: "JS",
         collapsable: true,
-        children: ["/JS/start.md", "JS/js1.md", "JS/forEach_map.md"],
+        children: ["JS/js1.md", "JS/forEach_map.md"],
       },
       {
         title: "React",
