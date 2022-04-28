@@ -83,6 +83,11 @@ module.exports = {
         collapsable: true,
         children: ["/About_IT_Project/it_project.md"],
       },
+      {
+        title: "Django",
+        collapsable: true,
+        children: ["/Django/django1.md"],
+      },
     ],
   },
 
