@@ -82,3 +82,33 @@ function App() {
 }
 export default App;
 ```
+
+### 7) Props
+
+- 리액트에서 컴포넌트에 지정한 속성들을 `Props`라고 부른다.
+
+만약 App.js 파일과 Button.js 파일이 있다고 가정해 보자.
+
+[App.js]
+
+```
+function App() {
+  return (
+    <div>
+      <Button color = "purple" /> // 리액트에서는 이런 식으로 컴포넌트에 속성 지정이 가능하다.
+    </div>
+  );
+}
+```
+
+[Button.js]
+
+```
+import btnPurple from './assets/btnPurple';
+function Button(purple) {
+  return <img src = {btnPurple} alt="보라색 헤더">
+}
+```
+
+- App 함수에서 사용하는 Button 컴포넌트에 color라는 속성을 purple로 지정해주고, App함수 내부에서 props 라는 파라미터를 만들어 보라색 버튼을 출력한 것이다.
+- props 파라미터를 활용해서 똑같은 컴포넌트이지만 전달된 속성 값에 따라서 원하는대로 다른 모습을 화면에 그릴 수 있다.
