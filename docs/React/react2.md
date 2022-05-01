@@ -111,4 +111,49 @@ function Button(purple) {
 ```
 
 - App 함수에서 사용하는 Button 컴포넌트에 color라는 속성을 purple로 지정해주고, App함수 내부에서 props 라는 파라미터를 만들어 보라색 버튼을 출력한 것이다.
-- props 파라미터를 활용해서 똑같은 컴포넌트이지만 전달된 속성 값에 따라서 원하는대로 다른 모습을 화면에 그릴 수 있다.
+- props 파라미터를 활용해서 똑같은 컴포넌트이지만 전달된 속성 값에 따라서 원하는대로 다른 모습을 화면에 그릴 수 있다. 이해가 가지 않는다면 예시를 살펴보자!
+- 가위바위보를 예시를 들어보자.
+
+[App.js]
+
+```
+import handIcon from './HandIcon';
+function App() {
+  return (
+    <div>
+      <handIcon value="rock" />
+      <handIcon value="scissor" />
+      <handIcon value="paper" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+[HandIcon.js]
+
+```
+import rockImg from './assets/rock.png';
+import scissorImg from './assets/scissor.png';
+import paperImg from './assets/paper.png';
+
+const IMAGES = { //전달받은 값에 따라 서로 다른 이미지를 보여주기 위해 만든 객체.
+  rock: rockImg,
+  scissor: scissorImg,
+  paper: paperImg,
+};
+
+function HandIcom {{value}} { //전달받은 값에 따라 서로 다른 이미지를 보여주는 코드
+  const src = IMAGES[value]; //매번 다른 이미지를 불러오는 코드를 작성하는 것 보다 IMAGES 객체를 만들어서 간소화하여 코드를 작성하는 것이 편리함.
+  return <img src={src} alt={value} />;
+}
+```
+
+- 이런 식으로 코드를 작성하면 handIcon 컴포넌트를 한 번만 만들어두면 매번 이미지파일을 직접 다루지 않더라도 컴포넌트의 value prop만 정해주면 되니 편리하다는 이점이 있다.
+
+[!다시 정리!]
+
+- 리액트에서는 컴포넌트에 데이터를 전달해주기 위해서 props를 활용한다.
+- JSX 문법으로 코드를 작성할 때 HTML 태그에 속성을 지정하듯이 컴포넌트 태그에 속성을 지정해주면 컴포넌트를 정의하는 함수의 첫 번째 파라미터로 이 속성들이 하나의 객체 형태로 모여서 전달이 되는 원리이다.
+- 컴포넌트 내부에서 props 값을 활용하려면 컴포넌트를 정의한 함수에 첫 번째 파라미터를 작성해서 이 값을 객체처럼 활용해야 한다.
