@@ -5,12 +5,14 @@ title: Django 프로젝트를 처음 만들 때
 ### 장고 실행단계
 
 - `$ python -m venv myvenv` 가상환경 생성
+  - 가상환경이란? 독립적인 개발환경을 생성하는 것.
 - `$ pip install django` 장고 설치
 - `$ pip freeze` 설치된 앱 확인
 
 ### 장고 프로젝트 시작
 
-- `$ django-admin startproject helloworld`
+- 장고 프로젝트 만들기
+- `$ django-admin startproject [프로젝트 이름]`
 
 ### 실행
 
