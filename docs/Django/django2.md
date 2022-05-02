@@ -1,4 +1,6 @@
-# Django 기초
+---
+title: Django 디렉토리 구조 뜯어보기
+---
 
 ## 장고 자동생성 파일?
 
@@ -21,7 +23,7 @@
 - `migrate`: 데이터베이스에 변화가 있을 때 사용한다.
 - `makemigration`: 데이터 변화에 필요한 새로운 migration을 만들 때 사용한다.
 
-**_2. **init**_.py**
+**\_2. **init**\_.py**
 
 비어있는게 정상인 폴더. django프로젝트가 패키지임을 알려주는 파일이다.
 
@@ -37,7 +39,10 @@
 
 \*참고: 한국말이고, 서울 시간으로 하려면 이렇게 설정한다.
 
-![Untitled](Django%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20f469ba2edcaa43bd9317ba52c41f219a/Untitled.png)
+```
+LANGUAGE_CODE = 'ko-kr;'
+TIME_ZONE = 'Asia/Seoul'
+```
 
 - `STATIC_URL`: 우리가 꾸미는 웹페이지에 이미 만들어둔 CSS, JavaScript, Images파일들이 어디에 있는지 알려줌
 
@@ -94,6 +99,6 @@ views를 통해서 이동해야할 html(보여지는)파일로 이동하게 rend
 [5.urls.py]
 이 app안에 있는 url을 처리한다. app내의 url은 전체 프로젝트에서도 관리할 수 있지만 그렇게 되면 url 에 걸린 path가 많아져 복잡하므로 app내에서 필요한 url은 여기에서 처리한다. (나중에 알게 되겠지만 url path에 views.py에 함수를 걸어주면서 페이지가 동작하게 된다.)
 
-6.[test.py](http://test.py/)
+6.[test.py]
 
 테스트를 할 수 있는 파일이다.
