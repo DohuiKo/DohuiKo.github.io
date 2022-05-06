@@ -1,5 +1,5 @@
 ---
-title: 장고 기본 활용: URL mapping
+title: 장고 URL mapping
 ---
 
 # url mapping
