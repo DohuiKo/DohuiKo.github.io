@@ -6,8 +6,6 @@ title: Django 디렉토리 구조 뜯어보기
 
 장고 프로젝트 폴더 종류 및 기능
 
-![https://postfiles.pstatic.net/MjAyMTA3MDdfMTg4/MDAxNjI1NjY4MDcxNzE4.xCrShI-y2UF2c8JQgWaJBlBziv7Y3YU4sBbR5yOF-zog.AdipZvocFY5X557_AjDr_URbgPH-UbQFTUJO4mwE8V8g.PNG.ksder99/Untitled_(7).png?type=w580](<https://postfiles.pstatic.net/MjAyMTA3MDdfMTg4/MDAxNjI1NjY4MDcxNzE4.xCrShI-y2UF2c8JQgWaJBlBziv7Y3YU4sBbR5yOF-zog.AdipZvocFY5X557_AjDr_URbgPH-UbQFTUJO4mwE8V8g.PNG.ksder99/Untitled_(7).png?type=w580>)
-
 **1.manage.py**
 
 웹 애플리케이션을 배포하거나 디버깅, 실행하는데 사용한다. 장고로 기초적인 개발을 하기 위해서 필요한 magage.py의 기능은 1. 서버 켜키 2. Application 만들기 3. Database 초기화 및 변경사항 반영 4. 관리자 계정 만들기이다.
@@ -66,8 +64,6 @@ wsgi와 비슷한 기능을 한다. django의 새로운 버전이다.
 
 app을 만들 때는 'python [manage.py] startapp 파일 이름'명령어를 사용한다. notice_board라는 app을 만든다면 'python [manage.py] startapp notice_board'를 사용한다.
 
-![https://postfiles.pstatic.net/MjAyMTA3MDdfNTIg/MDAxNjI1NjY4MTA0NTU2.DgcrlObMLS4KjjqcBKLUeddCnb2zefeMrLWkIpdt3jsg.RDx8gmjJ_dH3FobOPI2Ho3nTF7qw8MKVaTwI1Vh9U4Mg.PNG.ksder99/Untitled_(8).png?type=w580](<https://postfiles.pstatic.net/MjAyMTA3MDdfNTIg/MDAxNjI1NjY4MTA0NTU2.DgcrlObMLS4KjjqcBKLUeddCnb2zefeMrLWkIpdt3jsg.RDx8gmjJ_dH3FobOPI2Ho3nTF7qw8MKVaTwI1Vh9U4Mg.PNG.ksder99/Untitled_(8).png?type=w580>)
-
 \*참고
 
 장고 앱에 포함된 파일들은?
@@ -93,8 +89,6 @@ django 관리에 모델을 등록하는데 사용된다.
 웹페이지를 들어갔을 때 보여지는 페이지와 직접적인 연관성이 있는 페이지다. 보여지는 화면을 어떻게 구성할지를 함수를 통해서 나타낸다. 필요한 기능은 모듈 import를 활용하며, 리턴값이 있는 함수의 형태로 사용한다. 오해하면 안되는 것은 진짜 사용자가 웹페이지를 볼 때는 html과 css코드를 보게 된다는 것이다.
 
 views를 통해서 이동해야할 html(보여지는)파일로 이동하게 render해준다.
-
-![https://postfiles.pstatic.net/MjAyMTA3MDdfMjc4/MDAxNjI1NjY4MTA5MzI2.oFjpCGXVgNCwD0prxV3IA-uBlwk0s0thZENJj7YywfEg.rLR3t_h0VaNsx6-DuQQ1yWNTDZ7sCuIqyD-AMuAaUfIg.PNG.ksder99/Untitled_(9).png?type=w580](<https://postfiles.pstatic.net/MjAyMTA3MDdfMjc4/MDAxNjI1NjY4MTA5MzI2.oFjpCGXVgNCwD0prxV3IA-uBlwk0s0thZENJj7YywfEg.rLR3t_h0VaNsx6-DuQQ1yWNTDZ7sCuIqyD-AMuAaUfIg.PNG.ksder99/Untitled_(9).png?type=w580>)
 
 [5.urls.py]
 이 app안에 있는 url을 처리한다. app내의 url은 전체 프로젝트에서도 관리할 수 있지만 그렇게 되면 url 에 걸린 path가 많아져 복잡하므로 app내에서 필요한 url은 여기에서 처리한다. (나중에 알게 되겠지만 url path에 views.py에 함수를 걸어주면서 페이지가 동작하게 된다.)
