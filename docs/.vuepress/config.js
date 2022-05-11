@@ -76,6 +76,7 @@ module.exports = {
           "/Github/github3.md",
           "/Github/github4.md",
           "/Github/github5.md",
+          "/Github/github6.md",
         ],
       },
       {
