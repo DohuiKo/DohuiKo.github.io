@@ -26,7 +26,6 @@ module.exports = {
     ],
     ["meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg"}],
   ],
-
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
