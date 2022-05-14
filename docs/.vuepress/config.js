@@ -21,6 +21,7 @@ module.exports = {
     ["meta", { name: "theme-color", content: "#ffc0cb" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
+    ["script", { async src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710915329895675", crossorigin: "anonymous"}],
     //["meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg"}],
   ],
   /**
