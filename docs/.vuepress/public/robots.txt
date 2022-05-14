@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://dohuiko.github.io/play-my-life/sitemap.xml
-
