@@ -112,8 +112,7 @@ module.exports = {
     [
       "sitemap",
       {
-        hostname:
-          "https://dohuiko.github.io/play-my-life/google-site-verification: googlef7290db881c19ea8.html",
+        hostname: "https://dohuiko.github.io/play-my-life/",
       },
     ],
     "@vuepress/plugin-back-to-top",
