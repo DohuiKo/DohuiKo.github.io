@@ -2,9 +2,6 @@
 title: Django에 필요한 python문법
 ---
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710915329895675"
-     crossorigin="anonymous"></script>
-
 # 수강노트: Django사용을 위해 필요한 Python
 
 ## 필수 개념
