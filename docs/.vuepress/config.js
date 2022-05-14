@@ -20,17 +20,8 @@ module.exports = {
   head: [
     ["meta", { name: "theme-color", content: "#ffc0cb" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    ],
-    [
-      "meta",
-      {
-        name: "google-site-verification",
-        content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg",
-      },
-    ],
+    ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
+    ["meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg" }],
   ],
 
   /**
