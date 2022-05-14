@@ -4,29 +4,29 @@ title: JSX문법
 
 # **JSX란?**
 
-JSX는 자바스크립트의 확장 문법인데요. 리액트로 코드를 작성할 때 HTML 문법과 비슷한 이 JSX 문법을 활용하면 훨씬 더 편리하게 화면에 나타낼 코드를 작성할 수가 있게 됩니다.
+JSX는 자바스크립트의 확장 문법이다. JSX 문법을 활용하면 훨씬 더 편리하게 화면에 나타낼 코드를 작성할 수 있따.
 
 ```
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(<h1>안녕 리액트!</h1>, document.getElementById('root'));
+ReactDOM.render(<h1> Hello 리액트 </h1>, document.getElementById('root'));
 
 ```
 
 # **JSX 문법**
 
-JSX는 자바스크립트로 HTML과 같은 문법을 사용할 수 있도록 만들어주는 편리한 문법이지만, 그만큼 꼭 지켜야 할 규칙들도 있습니다.
+JSX는 자바스크립트로 HTML과 같은 문법을 사용할 수 있도록 만들어주는 편리한 문법이다.
+JSX문법 만의 규칙이 몇 가지 있다.
 
 ## **HTML과 다른 속성명**
 
-### 1. 속성명은 카멜 케이스로 작성하기!
+### 1. 속성명은 카멜 케이스로 작성한다.
 
-JSX 문법에서도 태그에 속성을 지정해 줄 수 있습니다. 단, 여러 단어가 조합된 몇몇 속성들을 사용할 때는 반드시 카멜 케이스(Camel Case)로 작성해야 합니다.
-사실 여러 단어가 조합된 HTML 속성들이 많진 않지만, 예를 들면 **`onclick`**, **`onblur`**, **`onfocus`** 등과 같은 이벤트 속성이나, **`tabindex`** 같은 속성들이 있습니다.
-이런 속성들은 모두 **`onClick`**, **`onBlur`**, **`onFocus`**, **`onMouseDown`**, **`onMouseOver`**, **`tabIndex`** 처럼 작성하는 것이죠!
+JSX 문법에서도 태그에 속성을 지정해 줄 수 있다. 여러 단어가 조합된 몇몇 속성들을 사용할 때는 반드시 카멜 케이스(Camel Case)로 작성해야 한다.
+예를 들면 **`onclick`**, **`onblur`**, **`onfocus`** 등과 같은 이벤트 속성이나, **`tabindex`** 같은 속성들을 카멜 케이스로 작성해야 한다. (다행히 이런 경우가 흔치는 않다!)
 
 ```
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 ReactDOM.render(
   <button onClick= ... >클릭!</button>,
@@ -35,10 +35,13 @@ ReactDOM.render(
 
 ```
 
-단, 예외적으로 HTML에서 비표준 속성을 다룰 때 활용하는 **`data-*`** 속성은 카멜 케이스(Camel Case)가 아니라 기존의 HTML 문법 그대로 작성하셔야 합니다.
+예외적으로 **`data-*`** 속성은 카멜 케이스(Camel Case)가 아니라 기존의 HTML 문법 그대로 작성하셔야 합니다.
+HTML 요소의 **`data-*`**로 시작하는 속성을 `데이터 속성` 이라고 한다.
+브라우저가 (임의로 지정한) 데이터 속성에 관여하기 않기 때문에 특정한 데이터를 저장하고 싶은 경우 데이터 속성을 활용한다.
+<span style = "font-size: 0.2rem;"> 엄밀히 따지면 HTML 태그 사용하면서 data-라는 이름을 사용하지 않아도 태그에 없는 속성을 사용하는 경우를 모두 비표준 속성이라고 할 수 있다. 그러나 아무런 규칙도 없다면 코드가 엉망이 될 가능성이 크기 때문에 개발자 편의를 위해 사용하는 비표준 속성은 속성명을 작성할 때 data- 코드를 앞에 붙이는 것이 일종의 룰이라고 볼 수 있겠다. </span>
 
 ```
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 ReactDOM.render(
   <div>
@@ -52,93 +55,52 @@ ReactDOM.render(
 
 ```
 
-### 2. 자바스크립트 예약어와 같은 속성명은 사용할 수 없다!
+### 2. 자바스크립트 예약어와 같은 속성명은 사용할 수 없고, 프래그넌트를 적극 활용하자!
 
-JSX 문법도 결국은 자바스크립트 문법이기 때문에, **`for`**나 **`class`**처럼 자바스크립트의 문법에 해당하는 예약어와 똑같은 이름의 속성명은 사용할 수 없습니다.
-그래서 HTML의 **`for`**의 경우에는 자바스크립트의 반복문 키워드 **`for`**와 겹치기 때문에 **`htmlFor`**로, HTML의 **`class`** 속성도 자바스크립트의 클래스 키워드 **`class`**와 겹치기 때문에 **`className`**으로 작성해 주어야 합니다.
-
-[React 공식 문서 - 어트리뷰트의 차이](https://ko.reactjs.org/docs/dom-elements.html#differences-in-attributes)
+- 프래그넌트(Fragment)는 React v16에 추가된 기능이다.
+- JSX는 컴포넌트가 여러 앨리먼트(element)를 하나의 태그로 묶어서 return해주어야 한다. (그렇지 않으면 인식을 못한다. 왜 그런지는.... 문법으로 받아들이기로 하자.) 원래는 아래처럼 div태그를 달아서 여러 앨리먼트를 하나의 태그로 묶어주었으나
 
 ```
-import ReactDOM from 'react-dom';
+import Header from '../Header';
+import GoodsCard from '../GoodsCard';
 
-ReactDOM.render(
-  <form>
-    <label htmlFor="name">이름</label>
-    <input id="name" className="name-input" type="text" />
-  </form>,
-  document.getElementById('root')
-);
+function MainContent() {
+  return (
+    <div>
+    <Header />
+    <GoodsCard />
+    </div>
+  );
+}
 
-```
-
-## **반드시 하나의 요소로 감싸기 - Fragment**
-
-JSX 문법을 활용할 때는 반드시 하나의 요소로 감싸주어야 합니다. 그래서 아래 코드처럼 여러 개의 요소를 작성하면 오류가 발생하는데요.
-
-```
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(
-  <p>안녕</p>
-  <p>리액트!</p>,
-  document.getElementById('root')
-);
+export default MainContent;
 
 ```
 
-이럴 때는 아래 코드처럼 여러 태그를 감싸는 부모 태그를 만들어 하나의 요소로 만들어 주어야 합니다.
+이제는 div태그를 남발하지 않아도 된다!
 
 ```
-import ReactDOM from 'react-dom';
+import Header from '../Header';
+import GoodsCard from '../GoodsCard';
 
-ReactDOM.render(
-  <div>
-    <p>안녕</p>
-    <p>리액트!</p>
-  </div>,
-  document.getElementById('root')
-);
+function MainContent() {
+  return (
+    <>
+    <Header />
+    <GoodsCard />
+    </>
+  );
+}
 
-```
-
-하지만 이렇게 작성한다면 때로는 꼭 필요하지 않은 부모 태그가 작성될 수 있겠죠? 그럴 땐 **`Fragment`**로 감싸주면 의미 없는 부모 태그를 만들지 않아도 여러 요소를 작성할 수 있습니다.
-
-```
-import { Fragment } from 'react';
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(
-  <Fragment>
-    <p>안녕</p>
-    <p>리액트!</p>
-  </Fragment>,
-  document.getElementById('root')
-);
-
-```
-
-참고로 **`Fragment`**는 아래 코드처럼 빈 태그로 감싸는 단축 문법으로 활용할 수도 있습니다.
-
-```
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(
-  <>
-    <p>안녕</p>
-    <p>리액트!</p>
-  </>,
-  document.getElementById('root')
-);
-
+export default MainContent;
 ```
 
 ## **자바스크립트 표현식 넣기**
 
-JSX 문법에서 **중괄호({})**를 활용하면 자바스크립트 표현식을 넣을 수 있습니다.
+JSX 문법에서 **중괄호({})**를 활용하면 자바스크립트 표현식을 넣을 수 있다.
 
 ```
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 const product = '맥북';
 
@@ -149,29 +111,37 @@ ReactDOM.render(
 
 ```
 
-이런 부분들을 잘 활용하면, 아래 코드처럼 중괄호 안에서 문자열을 조합할 수도 있고 변수에 이미지 주소를 할당해서 **`img`** 태그의 **`src`** 속성값을 전달해 줄 수도 있고, 이벤트 핸들러를 좀 더 편리하게 등록할 수도 있습니다.
+중괄호 문법을 잘 활용한다면 변수에 이미지 주소를 할당해서 **`img`** 태그의 **`src`** 속성값을 전달해 줄 수 있다.
+(이벤트 핸들러 사용하기도 편리하고, 중괄호에 다른 문자 조합하는 것도 가능하다.)
 
 ```
-import ReactDOM from 'react-dom';
+import './style/style.css';
+import userIcon from './assets/userIcon.svg';
+import searchIcon from './assets/searchIcon.svg';
+import bellIcon from './assets/bellIcon.svg';
+import hggLogo from './assets/hggLogo.png';
 
-const product = 'MacBook';
-const model = 'Air';
-const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/MacBook_with_Retina_Display.png/500px-MacBook_with_Retina_Display.png'
-
-function handleClick(e) {
-  alert('곧 도착합니다!');
+function Header() {
+  return (
+    <div className="header">
+      <img className="header__logo" src={hggLogo} alt="흒로고" />
+      <div className="header__icons">
+        <img className="header__icons-bell" src={bellIcon} alt="알림아이콘" />
+        <img className="header__icons-user" src={userIcon} alt="유저이미지" />
+        <img className="header__icons-search" src={searchIcon} alt="돋보기아이콘" />
+      </div>
+    </div>
+  );
 }
 
-ReactDOM.render(
-  <>
-    <h1>{product + ' ' + model} 주문하기</h1>
-    <img src={imageUrl} alt="제품 사진" />
-    <button onClick={handleClick}>확인</button>
-  </>,
-  document.getElementById('root')
-);
+export default Header;
 
 ```
 
-단, JSX 문법에서 중괄호는 자바스크립트 **표현식**을 다룰 때 활용하기 때문에, 중괄호 안에서 for, if문 등의 문장은 다룰 수 없다는 점은 꼭 기억해 주세요.
-그런데도 만약 JSX 문법을 활용할 때 조건문이 꼭 필요하다면 조건 연산자를, 반복문이 꼭 필요하다면 배열의 반복 메소드를 활용해 볼 수는 있겠죠?
+단, 중괄호 안에서 for, if문 등의 문장은 다룰 수 없다.
+그렇다면 어떻게 조건문과 반복문을 사용할까?
+
+조건문의 경우 삼항연산자, AND연산자, 즉시발동함수를 사용하고,
+반복문의 경우 `map()`을 사용하거나 일반 함수를 새로 만들어서 중괄호{}안에 그 함수를 넣는 방식을 사용해야한다.
+
+\*\*React에서 js와 같은 for 문을 사용하고 싶다면 따로 `함수`를 만들어 사용해야한다.
