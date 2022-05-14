@@ -55,12 +55,12 @@ module.exports = {
       {
         title: "JS",
         collapsable: true,
-        children: ["JS/js1.md", "JS/forEach_map.md"],
+        children: ["JS/js1.md", "JS/forEach_map.md", "JS/reference_type.md"],
       },
       {
         title: "React",
         collapsable: true,
-        children: ["/React/react1.md", "/React/react2.md"],
+        children: ["/React/react1.md", "/React/react2.md", "/React/react3.md"],
       },
       {
         title: "Vuepress",
