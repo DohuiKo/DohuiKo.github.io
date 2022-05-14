@@ -24,7 +24,7 @@ module.exports = {
       "meta",
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
-    [ "meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg"}],
+    ["meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg"}],
   ],
 
   /**
@@ -103,12 +103,7 @@ module.exports = {
    */
   plugins: [
     ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
-    [
-      "sitemap",
-      {
-        hostname: "https://dohuiko.github.io/play-my-life/",
-      },
-    ],
+    ["sitemap",{ hostname: "https://dohuiko.github.io/play-my-life/"}],
     "@vuepress/plugin-back-to-top",
   ],
 };
