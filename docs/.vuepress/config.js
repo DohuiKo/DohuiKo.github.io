@@ -21,7 +21,14 @@ module.exports = {
     ["meta", { name: "theme-color", content: "#ffc0cb" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
-    ["script", {async: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710915329895675", crossorigin:"anonymous"}],
+    [
+      "script",
+      {
+        "data-ad-client" : "ca-pub-5710915329895675",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      }
+    ],
     //["meta", { name: "google-site-verification", content: "9Yr8oGVaikdf_6-kdG1Kcko0Han0jMLCrh6bfkZN1Xg"}],
   ],
   /**
@@ -102,5 +109,9 @@ module.exports = {
     ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
     ["sitemap",{ hostname: "https://dohuiko.github.io/play-my-life/"}],
     "@vuepress/plugin-back-to-top",
+    "vuepress-plugin-google-adsense",
+    {
+      adClient: "ca-pub-5710915329895675",
+    },
   ],
 };
