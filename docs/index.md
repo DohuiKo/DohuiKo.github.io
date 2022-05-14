@@ -5,11 +5,11 @@ tagline:
 actionText: Quick Start →
 actionLink: /intro
 features:
-  - title: Feature 1 Title
-    details: Feature 1 Description
-  - title: Feature 2 Title
-    details: Feature 2 Description
-  - title: Feature 3 Title
-    details: Feature 3 Description
+  - title: Django
+    details: 프로젝트를 실현하기 위한 django 기본
+  - title: JavaScript
+    details: 웹개발에 필요한 자바스크립트 개념 익히기
+  - title: React
+    details: 리액트 코드를 탄탄하게 짜기 위한 노력 기록
 footer: Made by  with ❤️ Dohui
 ---
