@@ -99,6 +99,13 @@ module.exports = {
           "/Django/django3.md",
         ],
       },
+      {
+        title: "MOD",
+        collapsable: true,
+        children: [
+          "/MOD/week1.md",
+        ],
+      },
     ],
   },
 
