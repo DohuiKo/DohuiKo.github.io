@@ -2,7 +2,9 @@
 title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
 
 ---
-## 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
+---
+### 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
+---
 
 이번에 멋쟁이사자처럼 대학과 넥슨이 협업해서 MOD라는 메타버스의 콘텐츠를 제작하는 프로젝트를 시작했다.
 
