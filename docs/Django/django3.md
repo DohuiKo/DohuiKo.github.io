@@ -1,13 +1,11 @@
-# 수강노트 : url mapping과 static
+---
+title: Django URL mapping과 Static
+---
 
-### 무료 아이콘 사이트
-
-[Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
-
-# url mapping
+## url mapping
 
 - url사이를 자유자재로 왔다갔다하려면 어떻게 해야 할까?
-1. 이해를 돕기 위해 practice_url이라는 프로젝트를 설치하고, practice_url폴더 안에 myapp, board, product 세 개의 폴더를 생성하였다.
+### 1. 이해를 돕기 위해 practice_url이라는 프로젝트를 설치하고, practice_url폴더 안에 myapp, board, product 세 개의 폴더를 생성하였다.
 
 ![Untitled 1](https://user-images.githubusercontent.com/81297662/169216414-5fcfa335-4c91-4880-88d7-94b2b0e8178d.png)
 
@@ -17,7 +15,8 @@
 - 이 상태에서 `python manage.py startapp [생성할 앱 이름]` 명령어를 사용하여 앱을 만들 수 있다. python manage.py안에서 앱을 생성할 수 있는 것이므로, ls명령어를 통해 manage.py가 있는 위치에서 실행하도록 한다.
 - url mapping을 연습하기 위해서 앱 생성 명령어 활용해서 세 개의 폴더를 만들어 둔 상태가 위의 이미지이다.
 
-1. 가장 먼저 살펴보아야 할 것은 프로젝트 이름과 동일한 폴더 안에 있는 urls.py파일이다. 웹페이지에서는 특정 기능을 구현하기 위해서 여러 개의 앱을 사용하며, 앱단위로 url을 관리하므로 앱 단위로 url을 관리할 수 있도록 `from django.urls import path, include` 코드와 urlpatterns = []안에  `path(’지정하려는 urls이름 마음대로 설정/’, include('url포함하려는 앱 이름.urls'))` 코드를 넣어준다. 위 디렉토리에 따르면, product앱과 board앱을 설치했다. 따라서 product앱에 필요한 urls와 board앱에 필요한 urls를 include시켜주었다.
+### 2. 가장 먼저 살펴보아야 할 것은 프로젝트 이름과 동일한 폴더 안에 있는 urls.py파일이다.
+- 웹페이지에서는 특정 기능을 구현하기 위해서 여러 개의 앱을 사용하며, 앱단위로 url을 관리하므로 앱 단위로 url을 관리할 수 있도록 `from django.urls import path, include` 코드와 urlpatterns = []안에  `path(’지정하려는 urls이름 마음대로 설정/’, include('url포함하려는 앱 이름.urls'))` 코드를 넣어준다. 위 디렉토리에 따르면, product앱과 board앱을 설치했다. 따라서 product앱에 필요한 urls와 board앱에 필요한 urls를 include시켜주었다.
 
 ```python
 from django.contrib import admin
@@ -44,7 +43,7 @@ urlpatterns = [
 
 - 해당 앱에서 url을 작성한다면 자연스럽게 `127.0.0.1:8000/[지정한 path이름]/` 에서 url이 시작된다.
 
-1. 각각의 app안에 templates폴더를 만들고, 그 안에 html파일을 두 개씩 만들고, 해당 앱의 views.py파일에서 request가 있을 때 html파일을 render해주는 함수를 만들어준다.
+### 3. 각각의 app안에 templates폴더를 만들고, 그 안에 html파일을 두 개씩 만들고, 해당 앱의 views.py파일에서 request가 있을 때 html파일을 render해주는 함수를 만들어준다.
 
 - board 앱 디렉토리 구조
     
@@ -59,7 +58,8 @@ urlpatterns = [
 ![Untitled 4](https://user-images.githubusercontent.com/81297662/169216398-32a2ea95-323a-41b6-b529-0a8feea023e3.png)
     
 
-4. product 앱 안에 있는 코드를 살펴 보자. 이 앱 안에서 중요하게 살펴볼 요소는 `[views.py](http://views.py) 파일`, `urls.py 파일` , `templates폴더` 이다.  Django에서 사용자에게 페이지를 보여주기 위해서는 urls.py에 url을 띄울 때 (reuqest가 있을 때) html파일을 화면에 띄우는(render 하는) views.py의 함수를 부른다. 그러면 아래처럼 `#127.0.0.1:8000/products/` 경로에서 `productlist.html` 파일을 띄울 수 있다.
+### 4. product 앱 안에 있는 코드를 살펴 보자. 이 앱 안에서 중요하게 살펴볼 요소는 `[views.py]- (http://views.py) 파일`, `urls.py 파일` , `templates폴더` 이다.
+- Django에서 사용자에게 페이지를 보여주기 위해서는 urls.py에 url을 띄울 때 (reuqest가 있을 때) html파일을 화면에 띄우는(render 하는) views.py의 함수를 부른다. 그러면 아래처럼 `#127.0.0.1:8000/products/` 경로에서 `productlist.html` 파일을 띄울 수 있다.
 
 ![Untitled 5](https://user-images.githubusercontent.com/81297662/169216400-54035099-996d-4314-80e1-e6a450b12d94.png)
 
@@ -131,14 +131,17 @@ urlpatterns = [
         ```
         
 
-1. 4에서는 product 앱 안에 있는 코드를 예시로 들었지만 다른 앱의 작동 원리도 동일하다. 다른 앱 templates안에 있는 html파일도 동일한 원리로 동작시킬 수 있다.
+### 4. 4에서는 product 앱 안에 있는 코드를 예시로 들었지만 다른 앱의 작동 원리도 동일하다. 다른 앱 templates안에 있는 html파일도 동일한 원리로 동작시킬 수 있다.
 
-# static이란?
+## static이란?
 
+### static의 정의
 - 웹 서비스 내부 데이터는 Static과 Media 두 가지가 있다.
 - Static은 웹 서비스 내부에서 사용자를 위해서 미리 준비한 데이터
 - Media는 사용자가 업로드한, 사용자에 의한 데이터라고 보시면 됩니다.
 
+
+### 장고의 static
 - 장고에서는 settings.py의 STATICFILES_DIRS, STATIC_URL, STATIC_ROOT 파일에서 static파일들을 관리한다.
 - `STATICFILES_DIRS`: static파일들의 경로 작성
 - `STATIC_ROOT`: static 파일들을 복사하여 모아 놓을 경로를 설정
