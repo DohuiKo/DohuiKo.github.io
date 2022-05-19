@@ -97,6 +97,7 @@ module.exports = {
           "/Django/django1.md",
           "/Django/django2.md",
           "/Django/django3.md",
+          "/Django/django4.md",
         ],
       },
       {
