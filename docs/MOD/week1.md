@@ -30,7 +30,7 @@ title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
 
 아직 1주차라서 크게 어려운 내용은 없었다. VOD UI 각각이 의미하는 바가 뭔지는 일일히 적을 엄두가 안나서 일단 넘어가고 정리가 필요한 Entity, Component, Property를 먼저 정리하기로 했다.
 
-### Entity, Component, Property
+## Entity, Component, Property
 
 1. Entity
 
@@ -50,7 +50,7 @@ World 밑에 속하는 모든 것을 뜻하고 Tree형태로 구성돼있으면�
 entity의 세부적인 정보를 담고 있는 것이 property다. 예를 들어 entity가 포탈로서 작동하게 하려면 포탈 component를 부여하고, property로 포탈이 어디로 가는지 세부 정보를 설정해준다. 그렇다. property는 제작한 entity만의 고유한 특성이라고 볼 수 있다.
 
 
-### Model
+## Model
 
 
 Model은 뭐냐, 어떤 Entity의 component와 property 등의 정보를 가지고 있는 판본이다. vod를 조금이라도 만져보면 알겠지만 object든 npc든 똑같은 entity를 계속 사용하게 될텐데, 그것을 가능하게 해주는 것이 Model이라고 할 수 있겠다.
