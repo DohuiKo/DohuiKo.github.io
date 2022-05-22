@@ -105,6 +105,7 @@ module.exports = {
         collapsable: true,
         children: [
           "/MOD/week1.md",
+          "/MOD/week2.md"
         ],
       },
     ],
