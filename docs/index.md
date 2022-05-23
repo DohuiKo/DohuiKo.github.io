@@ -11,7 +11,5 @@ features:
     details: 웹개발에 필요한 자바스크립트 개념 익히기
   - title: React
     details: 리액트 코드를 탄탄하게 짜기 위한 노력 기록
-  - title: 테스트
-    details: 디테일은 더 늘어나나??
 footer: Made by  with ❤️ Dohui
 ---
