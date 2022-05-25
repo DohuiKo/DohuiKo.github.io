@@ -13,7 +13,7 @@ title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 2주차 회고
     - Scale: 물체의 크기를 나타낸다. (조정하면 늘어남) 1이하로도 나타낼 수 있다. (크기가 작아짐) 그 다음에 로테이션은 회전값인데, 물체를 회전시키는 것이다. 각 축에 회전할 수 있는데 2D 게임은 Z축으로 회전하는데 Z축으로 회전하면 와이퍼형으로 회전한다. (각도 별-360도면 원래대로 돌아옴) 연동 잘되어 있어서 잡고 움직이면 움직여진다. 마우스로 잡고 늘리기 가능함. 대각선은 동일한 비율 그 외에는 동일하지 않은 비율이다. 회전값은 모서리에서 회전 아이콘 떴을 때 회전 가능하다.
     - Entity는 계층 트리구조로 되어있어서 부모와 자식의 형태가 있다. 두 가지 엔티티를 합쳐서 합치고 싶다면? 하나의 object에 다른 object를 자식으로 넣는다. scale 바꾸면 자식도 같이 영향 받는다. 단, 하위 entity는 부모 좌표 기준으로 상대좌표를 나타낸다. world 기준으로 좌표는 자신의 좌표+부모 좌표라고 보면 된다.  `world position`은 **절대 좌표**라고 생각하면 편하고 `position`은 **상대 좌표**라고 생각하자. 각자 메이커에서 이동할 떄 계산이 되어서 알아서 계산이 될 것이다. World position은 절대 location, 그 외에는 상대 location이라고 생각하자.
         
-        ![절대좌표 상대좌표.png]!(https://user-images.githubusercontent.com/81297662/169676494-890d5e4e-0040-4b90-8d5c-11b9c6a3294d.png)
+        ![절대좌표_상대좌표](https://user-images.githubusercontent.com/81297662/170292515-d276ba95-8512-41da-8a69-ea57100a1e46.png)
         
 
 ### 2. `SpriteRendererComponent`
@@ -25,7 +25,7 @@ title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 2주차 회고
     
 - `RUID`는 가령 예를 들어서 이런 불길이 있다고 가정해 보자. 불길이 움직이고 있다. 이 ID를 그대로 복사해서 붙여넣으면 계속 움직인다. 선택했을 때 움직이지 않은 이유는 조작 쉽게하려고 멈춰있는 것이고 마우스로 선택하면 움직인다. 왜 움직일까? 이는 `RUID` 자체에 `animaion`을 가지고 있어서 그런 것이다. 몇 개의 프로퍼티는 어떤 주제를 가지고 동작한다. 예를 들어 `playrate`는 불꽃이 더 빠르게 움직이도록, 느리게 움직이도록 조정할 수 있다. (이때 plates라는 property는 숫자가 높을 수록 빨라진다)
     
-    ![Untitled](https://user-images.githubusercontent.com/81297662/169676501-85be7853-2e5f-4d4a-93a4-1b22dadd1512.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/81297662/170292544-7aca065b-9e6a-445f-baef-019809965d2a.png)
     
 - 다른 `property`도 살펴보자. `EndFrameIndex`, `StartFrameIndex` 를 살펴보면, 모두 애니메이션과 관련되어있다.
 - `FlipX`, `FlipY`는 좌우 반전을 의미한다.
@@ -37,7 +37,7 @@ title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 2주차 회고
 
 ex. 예를 들어 baseTree하나를 설정해서 다른 entity들을 하위 항목으로 묶어서 넣고 필요하면 애니메이션도 넣는다.
 
-![Untitled 2](https://user-images.githubusercontent.com/81297662/169676496-93daba7d-5b8a-4655-87c1-e7387a730dbd.png)
+![Untitled 2](https://user-images.githubusercontent.com/81297662/170292552-ea147398-5c0d-452c-9875-e1fdafe4ddf4.png)
 
 ## 지형과 레이어의 이해
 
@@ -47,7 +47,8 @@ ex. 예를 들어 baseTree하나를 설정해서 다른 entity들을 하위 항�
 - Scene을 먼저 보자. **직사각형 그리드**로 되어있다. 모서리 클릭하면 작게 그려지고 가운데는 크게 그려진다. 클릭 위치에 따라서 달라진다는 점을 이용해서 디테일한 맵 구현을 할 수 있다. 잘못 그려진 타일은 마우스 우클릭하면 삭제할 수 있다.
 - 상단 UI 옆 네모버튼 누르고나서 드래그하면 드래그한 영역에 타일 설정을 편리하게 할 수 있다. 마찬가지로 드래그+우클릭이면 삭제할 수 있다.
 
-![Untitled 3](https://user-images.githubusercontent.com/81297662/169676497-562b00b4-e53c-4c27-bd94-96fbf22e7f48.png)
+
+![Untitled 3](https://user-images.githubusercontent.com/81297662/170292553-71ec57a4-ac18-41b6-8fc7-5c73419a6787.png)
 
 - Scene Maker를 보자. TileMap을 보면 해당 Entity의 컴포넌트 구성 활용할 수 있다.
 - `TileMapComponent` 프로퍼티를 살펴보자.
@@ -60,7 +61,7 @@ ex. 예를 들어 baseTree하나를 설정해서 다른 entity들을 하위 항�
     - `SortingLayer`
     - `TileSerRUID`: 눈 버튼 클릭하면 스프라이트 피커에 들어간다. 원하는 것 선택하면 그것으로 바뀐다. 리소스들 마우스 우클릭 통해 카피 RUID 해서 설정하면 리소스가 변경됨 확인할 수 있다.
 
-![Untitled](2%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%203b72d7d458be4e9b9edfed80741fabb3/Untitled%203.png)
+![Untitled 4](https://user-images.githubusercontent.com/81297662/170292559-bfec45a9-4813-4097-bb33-8d0a2753d8d7.png)
 
 - Layer Panner  `+` 누르면 편리하게 Layer설정 가능하다. 한 개의 맵에는 최대 10개까지 레이어를 추가할 수 있다. 해당 레이어 활성화할 수 있다. 해당 레이어에서 아까 그렸던 타일들이 존재한다. 레이어에서 우클릭하면 다양한 옵션 확인 가능하다. property 편집기에서 SpriteRendererComponent에서도 원하는 레이어로 위치를 바꿀 수 있다.
 
@@ -80,11 +81,12 @@ ex. Elastic하면 탄성력이 있을 것 같다. 탄성력있게 움직인다. 
 - 강체 ↔ 육체 // 형질의 변하는 것이 육체, 강체는 일반적으로 고체. 형태가 바뀌지 않는다고 볼 수 있고 물체들의 물리적인 속성들을 컨트롤할 수 있는 것이 `RigidbodyComponent` 이다. MOD는 물리엔진 법칙을 완벽하게 구현하기는 어렵다. 객체와 다른 점은 하늘에서 떨어진다 Gravity때문이다. Sprite가 가지고 있는 원점을 잘 보자. 일반적으로는 센터에 원점이 있다. 몬스터는 보통 중앙 하단에 설정이 되어 타일을 밟고 있는 것처럼 보이게 떨어진다.
 - 수직으로 타일을 설정하면 앞으로 지나갈 수 있다. 옆에 다른 타일을 세워보자. 이럴 때 VerticalLineBlock을 켜주면 막히는 걸 확인할 수 있어요.발판 정보를 보고 기본적인 플레이어들의 룰에 따라서 해주면 된다.(개인적으로 잘 이해 안감)
 
-![Untitled 4](https://user-images.githubusercontent.com/81297662/169676498-c4ae338b-fc12-4b17-bee9-2fe9d95c6392.png)
+![Untitled 5](https://user-images.githubusercontent.com/81297662/170292561-e993b3a2-fa1b-42b1-852e-a9fbdde22776.png)
 
 - 맵에 따라서 쿼터뷰가 자연스럽게 될 수 있다. (둥둥떠다님) 기본적으로 횡스크롤 에셋들을 대부분 제공하지만, 종종 쿼터류 스러운 맵도 제공을 하고 있다. 이런 곳에서 다른 성격의 쿼터뷰 모드를 제공하려면 `BaseEnvironment` 컴포넌트에서 쿼터뷰 옵션을 키면 된다.
 
-![Untitled 5](https://user-images.githubusercontent.com/81297662/169676499-8c33baad-5aea-4ce8-9e4e-d47c4421d732.png)
+![Untitled](https://user-images.githubusercontent.com/81297662/170292565-53bd18dc-1664-40a0-8c63-2cb5a21335bb.png)
+
 
 - 이런 맵에서는 쿼터뷰 이동이 자연스럽다. `QuaterViewAcce` 에서 밑에 다른 옵션들을 선택해줄 수 있다. 이번에는 `MovementComponent` 에 대해서 알아보자.
 - `MovementComponent` 마찬가지로 Default 프레이머에 `MovementComponent`가 있음을 확인할 수 있다. `InputSpeed` 를 조정하면 빨라진다. 체크박스를 해지하면 조작이 완전히 불가능하다. (점프는 점프가 증폭됨)
