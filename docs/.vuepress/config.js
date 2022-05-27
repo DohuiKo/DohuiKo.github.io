@@ -65,7 +65,7 @@ module.exports = {
       {
         title: "React",
         collapsable: true,
-        children: ["/React/react1.md", "/React/react2.md", "/React/react3.md"],
+        children: ["/React/react1.md", "/React/react2.md", "/React/react3.md", "/React/react3.md"],
       },
       {
         title: "Vuepress",
