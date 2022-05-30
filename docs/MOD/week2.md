@@ -1,7 +1,7 @@
 ---
 title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 2주차 회고
 ---
-### 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
+### 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 2주차 회고
 
 ## 기본 컴포넌트 이해
 ### 1. `TransformComponent`

@@ -106,7 +106,8 @@ module.exports = {
         children: [
           "/MOD/week1.md",
           "/MOD/week2.md",
-          "/MOD/week3.md"
+          "/MOD/week3.md",
+          "/MOD/week4.md",
         ],
       },
     ],

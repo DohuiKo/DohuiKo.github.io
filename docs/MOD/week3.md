@@ -2,10 +2,7 @@
 title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 3주차 회고
 ---
 
-# 3주차
-
-내용요약: 6. 스크립트의 이해
-7. 네트워크의 이해
+### 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 3주차 회고
 
 ## 스크립트의 이해
 
