@@ -107,3 +107,9 @@ if self._T.time >= 3 then
 end
 ```
 - 삭제 전에는 isvalid가 true이고, 삭제 후에는 isvalid가 false임.
+
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-MfiSczU2oWdZ1btU" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
