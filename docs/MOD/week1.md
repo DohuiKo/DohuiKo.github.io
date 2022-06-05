@@ -13,7 +13,8 @@ title: 멋쟁이사자처럼 X 넥슨 MOD Suppoters Hackathon 1주차 회고
 
 
 .
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710915329895675"
+  crossorigin="anonymous"></script>
 
 
 한편, 이 프로젝트를 무사히 끝마치기 위해서 7주 동안 MOD콘텐츠 개발을 위한 교육에 들어간다. 게임은 하기만 하는 줄 알았는데 이제는 직접 개발을 하게 된다니 웃음만 나온다. (재밌을것 같긴 한데 저는... 웹.. 웹 개발자인데요..?) 7주 동안 교육을 받고 가장 먼저하는 것은 팀별로 가장 재미있는 콘텐츠를 만드는 해커톤(MOD Suppoters Hackathon)에 참여하는 것이다. 해커톤 참여를 위해서 해야하는 것 중에 하나가 TIL 작성하기다.
