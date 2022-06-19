@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>forEach와 map | Play My Life</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script data-ad-client="ca-pub-5710915329895675" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#ffc0cb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.ad2e4e73.css" as="style"><link rel="preload" href="/assets/js/app.34843af3.js" as="script"><link rel="preload" href="/assets/js/2.9f7d206a.js" as="script"><link rel="preload" href="/assets/js/22.f21b7d9b.js" as="script"><link rel="prefetch" href="/assets/js/10.d28190db.js"><link rel="prefetch" href="/assets/js/11.e5e0394a.js"><link rel="prefetch" href="/assets/js/12.2034ad8b.js"><link rel="prefetch" href="/assets/js/13.08c889a0.js"><link rel="prefetch" href="/assets/js/14.4627ae23.js"><link rel="prefetch" href="/assets/js/15.58d380f1.js"><link rel="prefetch" href="/assets/js/16.ef03bed0.js"><link rel="prefetch" href="/assets/js/17.f68431b2.js"><link rel="prefetch" href="/assets/js/18.a1997506.js"><link rel="prefetch" href="/assets/js/19.b8947373.js"><link rel="prefetch" href="/assets/js/20.0ed0ea82.js"><link rel="prefetch" href="/assets/js/21.3584f244.js"><link rel="prefetch" href="/assets/js/23.8c73ccd6.js"><link rel="prefetch" href="/assets/js/24.ed4bdbcb.js"><link rel="prefetch" href="/assets/js/25.025ccd7b.js"><link rel="prefetch" href="/assets/js/26.e53d9114.js"><link rel="prefetch" href="/assets/js/27.5b9cce4d.js"><link rel="prefetch" href="/assets/js/28.15443098.js"><link rel="prefetch" href="/assets/js/29.ca399aa6.js"><link rel="prefetch" href="/assets/js/3.bfe25ddb.js"><link rel="prefetch" href="/assets/js/30.64ac8e2c.js"><link rel="prefetch" href="/assets/js/31.f518576c.js"><link rel="prefetch" href="/assets/js/32.ef6b470d.js"><link rel="prefetch" href="/assets/js/33.0e6d9e85.js"><link rel="prefetch" href="/assets/js/34.f5a77502.js"><link rel="prefetch" href="/assets/js/35.6cf69811.js"><link rel="prefetch" href="/assets/js/36.3674e4e1.js"><link rel="prefetch" href="/assets/js/37.1f7114ff.js"><link rel="prefetch" href="/assets/js/4.e27a7f7a.js"><link rel="prefetch" href="/assets/js/5.e9f4081f.js"><link rel="prefetch" href="/assets/js/6.f1fa6fb3.js"><link rel="prefetch" href="/assets/js/7.94ca837f.js"><link rel="prefetch" href="/assets/js/8.e1ec8ae5.js"><link rel="prefetch" href="/assets/js/9.96320c2f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ad2e4e73.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Play My Life</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JS/js1.html" class="sidebar-link">자바스크립트 입문 핵심 개념</a></li><li><a href="/JS/forEach_map.html" aria-current="page" class="active sidebar-link">forEach와 map</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/JS/reference_type.html" class="sidebar-link">자바스크립트 참조 타입</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vuepress</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Github</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>About_IT_Project</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Django</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MOD</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>###forEach 함수란?
+Array 객체에서만 사용하능한 method로 배열의 요소들을 반복하여 작업을 수행한다.
+특별히 반복할 때 세 가지의 파라미터를 활용하여 기존의 for문보다 유용하게 코드를 짤 수 있다.</p> <div class="language- extra-class"><pre class="language-text"><code>const members = ['예은','희관', '도희','선아'];
+
+members.forEach((member) =&gt; {
+  console.log(`${member}님이 입장하셨습니다.`);
+})
+</code></pre></div><p>실행 결과 ▼</p> <div class="language- extra-class"><pre class="language-text"><code>예은님이 입장하셨습니다.
+희관님이 입장하셨습니다.
+도희님이 입장하셨습니다.
+선아님이 입장하셨습니다.
+</code></pre></div><p>만약 자바스크립트 코드였다면?</p> <div class="language- extra-class"><pre class="language-text"><code>const members = ['예은','희관', '도희','선아'];
+
+for( let member of members) {
+  console.log(`${member}님이 입장하셨습니다.`);
+}
+</code></pre></div><h3 id="foreach-함수의-파라미터"><a href="#foreach-함수의-파라미터" class="header-anchor">#</a> forEach 함수의 파라미터</h3> <ol><li>첫번째 파라미터는 배열의 요소이기 때문에 반드시 있어야 하고</li> <li>두번째 파라미터는 작성해주게 되면 요소의 인덱스를 관리할 수 있게 된다.</li></ol> <p>그래서 콘솔에 출력하는 메세지 앞쪽에 index를 같이 출력해줄 수 있다.</p> <div class="language- extra-class"><pre class="language-text"><code>const members = ['예은','희관', '도희','선아'];
+
+members.forEach((member, i) =&gt; {
+  console.log(`${i} ${member}님이 입장하셨습니다.`);
+})
+</code></pre></div><p>실행 결과 ▼</p> <div class="language- extra-class"><pre class="language-text"><code>0 예은님이 입장하셨습니다.
+1 희관님이 입장하셨습니다.
+2 도희님이 입장하셨습니다.
+3 선아님이 입장하셨습니다.
+</code></pre></div><p>인덱스도 활용할 수 있으니 for구문보다 훨씬 유용하다는걸 느낄 수 있다.</p> <p>또 인덱스는 다른 배열과 함께 활용하기에도 좋다.</p> <p>✨세번째 파라미터</p> <ul><li>반복 중인 배열 자체가 전달된다.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const members = ['예은','희관', '도희','선아'];
+
+members.forEach((member, i, arr) =&gt; {
+  console.log(`${i} ${member}님이 입장하셨습니다.`);
+  console.log(arr);
+})
+</code></pre></div><p>실행 결과 ▼</p> <div class="language- extra-class"><pre class="language-text"><code>0 예은님이 입장하셨습니다.
+[ '예은', '희관', '도희', '선아' ]
+1 희관님이 입장하셨습니다.
+[ '예은', '희관', '도희', '선아' ]
+2 도희님이 입장하셨습니다.
+[ '예은', '희관', '도희', '선아' ]
+3 선아님이 입장하셨습니다.
+[ '예은', '희관', '도희', '선아' ]
+</code></pre></div><h3 id="map"><a href="#map" class="header-anchor">#</a> map</h3> <ul><li>forEach와 거의 비슷하게 동작하지만 map은 메소드의 호출 결과로 새로운 배열을 리턴한다는 것이 forEach와 차이점이다.</li> <li>따라서 사용할 때 메소드를 사용해서 나온 배열을 저장할 변수를 지정하여 사용한다.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const firstNames = ['예은','희관', '도희','선아'];
+const lastNames = ['홍','설','고','민'];
+
+const fullNames = firstNames.map((firstNames, i) =&gt; lastNames[i] + firstNames);
+
+console.log(fullNames);
+</code></pre></div><p>실행 결과 ▼</p> <div class="language- extra-class"><pre class="language-text"><code>[ '홍예은', '설희관', '고도희', '민선아' ]
+</code></pre></div><ul><li>이런식으로 특정 배열의 요소들을 합칠 때는 앞으로 forEach나 map을 활용해보자!</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JS/js1.html" class="prev">
+        자바스크립트 입문 핵심 개념
+      </a></span> <span class="next"><a href="/JS/reference_type.html">
+        자바스크립트 참조 타입
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.34843af3.js" defer></script><script src="/assets/js/2.9f7d206a.js" defer></script><script src="/assets/js/22.f21b7d9b.js" defer></script>
+  </body>
+</html>
